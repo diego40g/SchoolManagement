@@ -25,8 +25,21 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Viista Nueva", "TestView", "Home")</li>
-                    <li>@Html.ActionLink("Curso", "Index", "Courses")</li>
+                    <li>@Html.ActionLink("Vista Nueva", "TestView", "Home")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Curso</a><span class="caret"></span>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Lista", "Index", "Courses")</li>
+                            <li>@Html.ActionLink("Nuevo", "Create", "Courses")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Estudiantes</a><span class="caret"></span>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Lista", "Index", "Students")</li>
+                            <li>@Html.ActionLink("Nuevo", "Create", "Students")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
